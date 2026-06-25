@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>soitskelley</title>
+<meta name="description" content="soitskelley — developer · designer · caffeine enthusiast">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root { --accent: oklch(0.84 0.13 165); --accent-bright: oklch(0.86 0.14 165); }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    background: #0d0e11;
+    color: #c7c9d1;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    min-height: 100%;
+  }
+  .card {
+    width: 100%;
+    max-width: 440px;
+    background: #131418;
+    border: 1px solid #26282f;
+    border-radius: 11px;
+    overflow: hidden;
+    box-shadow: 0 24px 60px rgba(0,0,0,.5);
+  }
+  .inner { padding: 34px 30px 28px; }
+  .path { font-size: 12px; color: rgba(110,114,126,.85); animation: fadeUp .4s .05s both; }
+  .name { font-size: 32px; font-weight: 700; letter-spacing: -.5px; color: #eceef4; margin-top: 14px; animation: fadeUp .45s .15s both; }
+  .name .dot { color: var(--accent); }
+  .bio { font-size: 13px; color: rgba(140,144,156,.9); margin-top: 8px; animation: fadeUp .4s .28s both; }
+  .links { display: flex; flex-direction: column; margin-top: 28px; border-top: 1px solid #22242b; animation: fadeUp .5s .42s both; }
+  .lk {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 4px 14px 6px;
+    color: #c9cbd3; text-decoration: none; font-size: 14px;
+    border-bottom: 1px solid #22242b;
+    transition: color .15s, transform .15s;
+  }
+  .lk:hover { color: var(--accent-bright); transform: translateX(4px); }
+  .lk .left { display: flex; align-items: baseline; gap: 11px; }
+  .lk .num { color: rgba(100,104,116,.7); font-size: 12px; }
+  .dot-end { display: block; flex: none; width: 7px; height: 7px; border-radius: 50%; background: #eceef4; transition: background .15s; }
+  .lk:hover .dot-end { background: var(--accent); }
+  .foot { font-size: 12px; color: rgba(110,114,126,.8); margin-top: 22px; animation: fadeUp .4s .9s both; }
+  .cursor { display: inline-block; width: 8px; height: 13px; background: var(--accent); transform: translateY(2px); animation: blink 1.1s steps(1) infinite; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: none; } }
+  @keyframes blink { 0%,48% { opacity: 1; } 49%,100% { opacity: 0; } }
+</style>
+</head>
+<body>
+  <main class="inner">
+      <div class="path">~ / soitskelley</div>
+      <div class="name">soitskelley<span class="dot">.</span></div>
+      <div class="bio">developer · designer · caffeine enthusiast</div>
+      <nav class="links">
+        <a class="lk" href="https://github.com/soitskelley" target="_blank" rel="noopener"><span class="left"><span class="num">01</span>github</span><span class="dot-end"></span></a>
+        <a class="lk" href="https://x.com/soitskelley" target="_blank" rel="noopener"><span class="left"><span class="num">02</span>twitter</span><span class="dot-end"></span></a>
+        <a class="lk" href="https://instagram.com/soitskelley" target="_blank" rel="noopener"><span class="left"><span class="num">03</span>instagram</span><span class="dot-end"></span></a>
+        <a class="lk" href="https://open.spotify.com/user/soitskelley" target="_blank" rel="noopener"><span class="left"><span class="num">04</span>spotify</span><span class="dot-end"></span></a>
+        <a class="lk" href="https://airbuds.fm/soitskelley" target="_blank" rel="noopener"><span class="left"><span class="num">05</span>airbuds</span><span class="dot-end"></span></a>
+        <a class="lk" href="https://snapchat.com/add/soitskelley" target="_blank" rel="noopener"><span class="left"><span class="num">06</span>snapchat</span><span class="dot-end"></span></a>
+        <a class="lk" href="https://apps.apple.com/app/" target="_blank" rel="noopener"><span class="left"><span class="num">07</span>my app</span><span class="dot-end"></span></a>
+      </nav>
+      <div class="foot">click anywhere above <span class="cursor"></span></div>
+  </main>
+</body>
+</html>
