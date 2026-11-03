@@ -1,0 +1,156 @@
+# Content signals
+#
+# As a condition of accessing this website, you agree to abide by the following
+# content signals:
+#
+# (a) If a content signal = yes, you may collect content for the corresponding use.
+# (b) If a content signal = no, you may not collect content for the corresponding use.
+# (c) If the website operator does not include a signal for a corresponding use,
+#     the operator neither grants nor restricts permission via content signal.
+#
+# search:   building a search index and providing search results. Does not include
+#           providing AI-generated search summaries.
+# ai-input: inputting content into one or more AI models (e.g. retrieval augmented
+#           generation, grounding, or other real-time taking of content for
+#           generative AI search answers).
+# ai-train: training or fine-tuning AI models.
+#
+# ANY RESTRICTIONS EXPRESSED VIA CONTENT SIGNALS ARE EXPRESS RESERVATIONS OF RIGHTS
+# UNDER ARTICLE 4 OF THE EUROPEAN UNION DIRECTIVE 2019/790 ON COPYRIGHT AND RELATED
+# RIGHTS IN THE DIGITAL SINGLE MARKET.
+
+User-agent: *
+Content-Signal: search=yes,ai-input=yes,ai-train=no
+Allow: /
+
+# ---------------------------------------------------------------------------
+# Answer engines that cite and link back: allowed, deliberately.
+#
+# Google-Extended governs Gemini and AI-answer grounding as well as training.
+# Blocking it buys a training opt-out we already express above, at the cost of
+# the citations this site exists to earn. Same reasoning for Vertex grounding.
+# ---------------------------------------------------------------------------
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Google-CloudVertexBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# ---------------------------------------------------------------------------
+# Training-only crawlers: disallowed.
+#
+# This list restates every crawler Cloudflare's managed robots.txt was blocking
+# as of 3 November 2026, minus the two grounding crawlers allowed above, so that
+# turning Bot Preference Sync off loses nothing that was previously declined.
+# ---------------------------------------------------------------------------
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: atlassian-bot
+Disallow: /
+
+User-agent: AwarioRssBot
+Disallow: /
+
+User-agent: AwarioSmartBot
+Disallow: /
+
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: BorderxBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: CitibotSiteCrawler
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: Cotoyogi
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: FishBot
+Disallow: /
+
+User-agent: GoogleOther
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ICC-Crawler
+Disallow: /
+
+User-agent: KimiBot
+Disallow: /
+
+User-agent: magpie-crawler
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+User-agent: MistralAI-Training
+Disallow: /
+
+User-agent: NavuBot
+Disallow: /
+
+User-agent: omgili
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: QualifiedBot
+Disallow: /
+
+User-agent: SemrushBot-SWA
+Disallow: /
+
+User-agent: WARDBot
+Disallow: /
+
+Sitemap: https://findkelley.com/sitemap.xml
